@@ -16,4 +16,16 @@ int main() {
   printf("pi = %x\n", pi);
   printf("*pi = %d\n", *pi);
   delete pi; // 메모리를 해제할때 사용하는 연산자
+
+  
+  // 배열의 메모리를 할당,해제하는 방법
+  int *ar;
+  ar = new int[5];
+  for (int i = 0; i < 5; i++) {
+    ar[i] = i;
+  }
+  for (int i = 0; i < 5; i++) {
+    printf("%d번째 = %d\n", i, ar[i]);
+  }
+  delete[] ar;
 }
